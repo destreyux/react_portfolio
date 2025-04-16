@@ -1,0 +1,110 @@
+/* src/components/BackgroundAnimation.css */
+
+.background-animation-container {
+  position: fixed; /* Position relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover entire viewport width */
+  height: 100%; /* Cover entire viewport height */
+  overflow: hidden; /* Prevent scrollbars if logos briefly exceed edges */
+  z-index: -1; /* CRUCIAL: Place behind all other page content */
+  /* Optional: faint background color for the container itself */
+  /* background-color: rgba(230, 240, 255, 0.1); */
+}
+
+.background-skill-logo {
+  position: absolute; /* Position relative to the fixed container */
+  width: 45px; /* Adjust size - smaller is often better for background */
+  height: 45px;
+  object-fit: contain;
+  opacity: 0; /* Start invisible, animation fades in */
+  will-change: opacity, top, left, transform; /* Performance hint */
+  /* Initial top/left set by inline style from JS */
+
+  /* --- Animation --- */
+  animation-name: bounceAround; /* Link to the bounce keyframes */
+  animation-duration: var(--animation-duration);
+  animation-delay: var(--animation-delay);
+  animation-timing-function: linear; /* Constant speed for bounce predictability */
+  animation-iteration-count: infinite; /* Loop forever */
+  animation-fill-mode: forwards; /* Not strictly needed for infinite, but doesn't hurt */
+  animation-direction: normal;
+}
+
+/* --- Keyframe Animation Definition: bounceAround --- */
+@keyframes bounceAround {
+  /* Fade In & Initial Move (0% - 10%) */
+  0% {
+    opacity: 0;
+    /* Start slightly rotated/scaled */
+    transform: rotate(-3deg) scale(0.9);
+    /* Initial Top/Left comes from inline style */
+  }
+  10% {
+    opacity: 0.3; /* Fade in to desired background opacity (ADJUST THIS VALUE) */
+    /* Move towards first corner/edge */
+    top: 5%;
+    left: 95%;
+    transform: rotate(15deg) scale(1);
+  }
+
+  /* Bounce around the edges (10% - 90%) */
+  /* Make sure top/left hit values close to 0% or 100% */
+  30% {
+    opacity: 0.3;
+    top: 90%;
+    left: 75%;
+    transform: rotate(-25deg) scale(1.05);
+  }
+  50% {
+    opacity: 0.3;
+    top: 85%;
+    left: 5%; /* Hit left edge */
+    transform: rotate(10deg) scale(0.95);
+  }
+  70% {
+    opacity: 0.3;
+    top: 10%;
+    left: 20%;
+    transform: rotate(30deg) scale(1);
+  }
+  90% {
+    opacity: 0.3;
+    top: 50%; /* Mid point */
+    left: 95%; /* Hit right edge */
+    transform: rotate(-10deg) scale(1.02);
+  }
+
+  /* Return towards start / loop smoothly (90% - 100%) */
+  100% {
+    opacity: 0.3; /* Maintain opacity */
+    /* End near the original start area or another point */
+    /* Needs to connect smoothly for infinite loop */
+    top: var(
+      --original-top,
+      50%
+    ); /* Example: Try to return - CSS vars for this are tricky */
+    left: var(
+      --original-left,
+      50%
+    ); /* Without JS intervention, returning exactly is hard */
+    /* Simpler: just arrive at another point before looping */
+    /* top: 30%; */
+    /* left: 40%; */
+    transform: rotate(-3deg) scale(0.9); /* Match 0% transform */
+  }
+}
+
+/* Media Queries for smaller logos on small screens */
+@media (max-width: 768px) {
+  .background-skill-logo {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .background-skill-logo {
+    width: 30px;
+    height: 30px;
+  }
+}

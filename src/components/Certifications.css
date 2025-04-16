@@ -1,0 +1,103 @@
+/* src/components/Certifications.css */
+
+.certifications-section {
+  background-color: transparent; /* Keep background visible */
+}
+
+.certifications-list {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  max-width: 800px; /* Limit width of the list */
+  margin: 0 auto; /* Center the list */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between certification items */
+}
+
+.certification-item {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Subtle background for list item */
+  padding: 1.5rem; /* Inner spacing */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+  /* --- Use Flexbox for side-by-side logo and text --- */
+  display: flex;
+  align-items: center; /* Vertically center logo and text block */
+  gap: 1.5rem; /* Space between logo and text block */
+}
+
+/* --- Styles for the certification logo --- */
+.cert-logo {
+  height: 50px; /* Control logo height */
+  width: 50px; /* Control logo width */
+  object-fit: contain; /* Ensure logo fits well without stretching */
+  flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+/* --- Wrapper for the text details --- */
+.cert-details {
+  flex-grow: 1; /* Allow text block to take remaining space */
+}
+
+/* Styles for text elements inside the details block */
+.cert-details h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cert-details p {
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.cert-details a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.cert-details a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certification-item {
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+  .cert-logo {
+    height: 40px;
+    width: 40px;
+  }
+  .cert-details h3 {
+    font-size: 1.1rem;
+  }
+  .cert-details p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Stack logo on top of text on very small screens */
+@media (max-width: 480px) {
+  .certification-item {
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center items horizontally when stacked */
+    text-align: center; /* Center text */
+  }
+  .cert-logo {
+    margin-bottom: 1rem; /* Add space below logo when stacked */
+    height: 50px; /* Adjust size if needed */
+    width: 50px;
+  }
+  .cert-details a {
+    display: block; /* Make link take its own line */
+    margin-top: 0.5rem; /* Add space above link */
+  }
+}

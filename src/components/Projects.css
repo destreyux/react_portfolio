@@ -1,0 +1,21 @@
+.projects-section {
+  background-color: transparent; /* Keep section container transparent */
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 2rem; /* Space between cards */
+  max-width: 1200px; /* Limit width */
+  margin: 0 auto; /* Center grid */
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
