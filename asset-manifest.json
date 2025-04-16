@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/react_porfolio/static/css/main.e0e90e4d.css",
+    "main.js": "/react_porfolio/static/js/main.c4d7526c.js",
+    "static/js/453.bb828c5d.chunk.js": "/react_porfolio/static/js/453.bb828c5d.chunk.js",
+    "static/media/project3.gif": "/react_porfolio/static/media/project3.82f31a03e9f68095a08c.gif",
+    "static/media/udemy.png": "/react_porfolio/static/media/udemy.fa7ab8ca41160c4f183b.png",
+    "static/media/project1.gif": "/react_porfolio/static/media/project1.50f82d704d4aa7e3cc94.gif",
+    "static/media/microsoft.png": "/react_porfolio/static/media/microsoft.b344c194f0ef1166c356.png",
+    "static/media/elmhurst.jpg": "/react_porfolio/static/media/elmhurst.0c0acbe60eb1cef49947.jpg",
+    "static/media/my-logo.png": "/react_porfolio/static/media/my-logo.755d086448326de0111a.png",
+    "static/media/project2.png": "/react_porfolio/static/media/project2.2704309b285f8af3498d.png",
+    "static/media/smartbear.png": "/react_porfolio/static/media/smartbear.0c411fd84498c39a0d7c.png",
+    "static/media/truman.jpg": "/react_porfolio/static/media/truman.649b5594afe4cb7d6987.jpg",
+    "static/media/jenkins-original.svg": "/react_porfolio/static/media/jenkins-original.7986e5354ca88e5044c88dd9562c5ed9.svg",
+    "static/media/playwright-original.svg": "/react_porfolio/static/media/playwright-original.90dcdab91976dde5410ea9cd1186f59c.svg",
+    "static/media/cypressio-original.svg": "/react_porfolio/static/media/cypressio-original.08a45b04fddf98c4fcca2e216293fec6.svg",
+    "static/media/react-original.svg": "/react_porfolio/static/media/react-original.4e0c97009b885bfa75c5412262a46f5f.svg",
+    "static/media/python-original.svg": "/react_porfolio/static/media/python-original.849d0b2b5f1ec20f077dd267498bd536.svg",
+    "static/media/nodejs-original.svg": "/react_porfolio/static/media/nodejs-original.3eb147b0e1b7a5455b9bf254bc5884af.svg",
+    "static/media/sqldeveloper-original.svg": "/react_porfolio/static/media/sqldeveloper-original.943d9de65c8719d201080514f3ab0f67.svg",
+    "static/media/javascript-original.svg": "/react_porfolio/static/media/javascript-original.4c1b5332c1b1057928f6f06cf972c91c.svg",
+    "static/media/selenium-original.svg": "/react_porfolio/static/media/selenium-original.cb5a0c8221c57c83693846680e71b209.svg",
+    "static/media/jira-original.svg": "/react_porfolio/static/media/jira-original.b894f17b42eb499ba8a4c4cecbb58a99.svg",
+    "static/media/css3-original.svg": "/react_porfolio/static/media/css3-original.39769a8bd378bf410d6b381a8d88fa35.svg",
+    "index.html": "/react_porfolio/index.html",
+    "static/media/c-original.svg": "/react_porfolio/static/media/c-original.13f24c473f4fd7f944b1410cc8058a89.svg",
+    "static/media/html5-original.svg": "/react_porfolio/static/media/html5-original.8664168d5bc90b1a24396f85aadbf623.svg",
+    "static/media/azuredevops-plain.svg": "/react_porfolio/static/media/azuredevops-plain.ab650dce16e66b3ab76e9cefc7f5e33e.svg",
+    "main.e0e90e4d.css.map": "/react_porfolio/static/css/main.e0e90e4d.css.map",
+    "main.c4d7526c.js.map": "/react_porfolio/static/js/main.c4d7526c.js.map",
+    "453.bb828c5d.chunk.js.map": "/react_porfolio/static/js/453.bb828c5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0e90e4d.css",
+    "static/js/main.c4d7526c.js"
+  ]
+}
