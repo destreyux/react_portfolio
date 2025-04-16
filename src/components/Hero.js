@@ -8,7 +8,7 @@ function Hero() {
       <h1>My Portfolio</h1>
       <h2>Software Quality Assurance Engineer</h2>
       <p>
-        Welcome to my portoflio! I'm passionate about software automation
+        Welcome to my portfolio! I'm passionate about software automation
         engineering specifically for testing web and mobile applications,
         however I do have experience with building web applications and android
         mobile applications.{" "}
