@@ -39,8 +39,8 @@ const skillsData = [
 
 // --- Configuration ---
 const MAX_LOGOS_VISIBLE = 12; // How many logos to animate in the background
-const MIN_ANIMATION_DURATION = 10; // Minimum seconds for a full bounce loop
-const MAX_ANIMATION_DURATION = 20; // Maximum seconds for a full bounce loop
+const MIN_ANIMATION_DURATION = 25; // Minimum seconds for a full bounce loop
+const MAX_ANIMATION_DURATION = 45; // Maximum seconds for a full bounce loop
 
 function BackgroundAnimation() {
   const [logoPositions, setLogoPositions] = useState([]);
