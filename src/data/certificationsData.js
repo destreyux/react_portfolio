@@ -13,6 +13,13 @@ export const certificationsData = [
     logoUrl: UDEMY,
   },
   {
+    name: "TestComplete QA Architect",
+    issuer: "SmartBear",
+    date: "04/2025",
+    link: null,
+    logoUrl: SMARTBEAR,
+  },
+  {
     name: "Lean Six Sigma White Belt",
     issuer: "Issuing Body",
     date: "04/2025",
@@ -25,13 +32,6 @@ export const certificationsData = [
     date: "04/2025",
     link: null,
     logoUrl: SIGMA,
-  },
-  {
-    name: "TestComplete QA Architect",
-    issuer: "SmartBear",
-    date: "04/2025",
-    link: null,
-    logoUrl: SMARTBEAR,
   },
   {
     name: "Associate, Customer Service (ACS) - Life Insurance",
