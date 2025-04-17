@@ -1,0 +1,63 @@
+/* src/components/Footer.css */
+
+.app-footer {
+  background-color: #f8f9fa; /* Example: Light grey background */
+  /* Or use transparent if you want background animation to show under it */
+  /* background-color: transparent; */
+  color: #555;
+  padding: 1.5rem 2rem;
+  margin-top: 4rem; /* Space above footer */
+  text-align: center;
+  border-top: 1px solid #dee2e6; /* Subtle top border */
+  position: relative; /* Keep in flow */
+  z-index: 1; /* Ensure above background animation if not transparent */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 0.8rem;
+  display: inline-flex; /* Align icon nicely if used */
+  align-items: center;
+  vertical-align: middle;
+  transition: opacity 0.3s ease; /* Simple hover effect */
+}
+
+.footer-links a:hover {
+  opacity: 0.7; /* Dim slightly on hover */
+}
+
+/* Style for the GitHub logo image */
+.footer-social-icon {
+  height: 28px; /* Adjust size */
+  width: 28px; /* Adjust size */
+  vertical-align: middle; /* Align icon */
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .app-footer {
+    padding: 1rem 1rem;
+    margin-top: 3rem;
+  }
+  .footer-social-icon {
+    height: 24px;
+    width: 24px;
+  }
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+}

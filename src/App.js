@@ -7,11 +7,12 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Certifications from "./components/Certifications";
 import Skills from "./components/Skills";
-import Education from "./components/Education"; // A new/modified Skills component
-// import Footer from './components/Footer'; // Optional
+import Education from "./components/Education";
+import Feedback from "./components/Feedback";
+import Footer from "./components/Footer";
 
 // Import Assets
-import myLogo from "./assets/my-logo.png"; // <-- IMPORT YOUR LOGO HERE
+import myLogo from "./assets/my-logo.png";
 
 import "./App.css"; // Main app styles
 
@@ -32,10 +33,9 @@ function App() {
         <Education />
         <Certifications />
         <Skills />
+        <Feedback />
       </main>
-
-      {/* Optional Footer */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

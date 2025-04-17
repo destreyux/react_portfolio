@@ -36,7 +36,7 @@ function Header({ logoSrc }) {
           <a href="#education">Education</a>
           <a href="#certifications">Certifications</a>
           <a href="#skills">Skills</a>
-          {/* <a href="#contact">Contact</a> */}
+          <a href="#feedback">Feedback</a>
         </nav>
 
         {/* --- Hamburger Menu Button (hidden by default, shown on mobile) --- */}
@@ -70,6 +70,9 @@ function Header({ logoSrc }) {
         </a>
         <a href="#skills" onClick={handleLinkClick}>
           Skills
+        </a>
+        <a href="feedback" onClick={handleLinkClick}>
+          Feedback
         </a>
         {/* <a href="#contact" onClick={handleLinkClick}>Contact</a> */}
       </nav>

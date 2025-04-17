@@ -1,0 +1,33 @@
+/* src/components/Feedback.css */
+
+.feedback-section {
+  text-align: center;
+  background-color: transparent; /* Ensure background animation shows */
+}
+
+.feedback-section p {
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto; /* Center paragraph and add more bottom margin */
+  line-height: 1.7;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.feedback-form-container {
+  max-width: 760px; /* Max width of the form container */
+  margin: 0 auto; /* Center the container */
+  border: 1px solid #ccc; /* Subtle border around the form */
+  border-radius: 8px;
+  overflow: hidden; /* Ensures iframe respects border-radius */
+  background-color: #fff; /* Add white background in case form loads slowly */
+}
+
+/* Optional: Adjust iframe height on smaller screens */
+@media (max-width: 768px) {
+  .feedback-form-container iframe {
+    height: 750px; /* Maybe taller on mobile? Adjust as needed */
+  }
+  .feedback-section p {
+    margin-bottom: 2rem;
+  }
+}
