@@ -71,7 +71,7 @@ function Header({ logoSrc }) {
         <a href="#skills" onClick={handleLinkClick}>
           Skills
         </a>
-        <a href="feedback" onClick={handleLinkClick}>
+        <a href="#feedback" onClick={handleLinkClick}>
           Feedback
         </a>
         {/* <a href="#contact" onClick={handleLinkClick}>Contact</a> */}

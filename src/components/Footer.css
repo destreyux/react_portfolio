@@ -1,63 +1,117 @@
 /* src/components/Footer.css */
 
 .app-footer {
-  background-color: #f8f9fa; /* Example: Light grey background */
-  /* Or use transparent if you want background animation to show under it */
-  /* background-color: transparent; */
+  /* --- Fixed Positioning --- */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Same level as header */
+
+  /* --- Styling --- */
+  background-color: #f8f9fa; /* Background needed for fixed */
   color: #555;
-  padding: 1.5rem 2rem;
-  margin-top: 4rem; /* Space above footer */
+  padding: 0.8rem 2rem; /* Padding for content */
   text-align: center;
-  border-top: 1px solid #dee2e6; /* Subtle top border */
-  position: relative; /* Keep in flow */
-  z-index: 1; /* Ensure above background animation if not transparent */
+  border-top: 1px solid #dee2e6;
+  box-sizing: border-box;
+
+  /* --- Explicit Height --- */
+  height: 55px; /* Desktop footer height */
 }
 
 .footer-content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Center content */
+  display: flex;
+  flex-direction: column; /* Stack links above copyright */
+  justify-content: center; /* Center vertically within footer height */
+  align-items: center; /* Center horizontally */
+  height: 100%; /* Fill the footer height */
 }
 
+/* --- Styling for the Links Container --- */
 .footer-links {
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem; /* Small space above copyright */
+  /* --- Use Flexbox for layout --- */
+  display: flex; /* Arrange links in a row */
+  justify-content: center; /* Center the links horizontally */
+  align-items: center; /* Align items vertically */
+  gap: 1.5rem; /* <<< Space BETWEEN the links (replaces margin on 'a') */
 }
 
+/* --- Styling for ALL links within .footer-links --- */
 .footer-links a {
   color: #333;
   text-decoration: none;
-  margin: 0 0.8rem;
-  display: inline-flex; /* Align icon nicely if used */
+  /* margin: 0 0.6rem; */ /* <<< Removed margin, using gap on parent now */
+  display: inline-flex; /* Align icon/text */
   align-items: center;
   vertical-align: middle;
-  transition: opacity 0.3s ease; /* Simple hover effect */
+  transition: opacity 0.3s ease, color 0.3s ease; /* Added color transition */
+  font-weight: 500; /* Optional: Make links slightly bolder */
 }
 
 .footer-links a:hover {
-  opacity: 0.7; /* Dim slightly on hover */
+  opacity: 0.7;
+  color: #007bff; /* Optional: change color on hover */
 }
 
 /* Style for the GitHub logo image */
 .footer-social-icon {
-  height: 28px; /* Adjust size */
-  width: 28px; /* Adjust size */
-  vertical-align: middle; /* Align icon */
+  height: 20px; /* Adjust icon size */
+  width: 20px;
+  vertical-align: middle; /* Helps alignment */
 }
+
+/* --- Optional: Specific styling for the Stripe link --- */
+/* Uncomment and customize if you want the Stripe link to look different */
+/*
+.footer-stripe-link {
+  font-size: 0.9rem;
+  // Add other styles like background, padding, border-radius if desired
+  // background-color: #6772e5;
+  // color: white;
+  // padding: 5px 10px;
+  // border-radius: 4px;
+}
+.footer-stripe-link:hover {
+  // background-color: #5469d4;
+  // opacity: 1; // Override general opacity hover if using background
+  // color: white; // Ensure text stays white if background changes
+}
+*/
+/* --- End Optional Stripe Styles --- */
 
 .footer-copyright {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #777;
+  line-height: 1; /* Keep compact */
 }
 
+/* --- Responsive Adjustments for Fixed Footer --- */
 @media (max-width: 768px) {
   .app-footer {
-    padding: 1rem 1rem;
-    margin-top: 3rem;
+    padding: 0.5rem 1rem;
+    height: 50px; /* Mobile footer height */
   }
+
+  .footer-links {
+    gap: 1rem; /* Reduce gap between links on mobile */
+  }
+
   .footer-social-icon {
-    height: 24px;
-    width: 24px;
+    height: 18px; /* Smaller icon on mobile */
+    width: 18px;
   }
+
   .footer-copyright {
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* Smaller copyright text */
   }
+
+  /* Adjust optional Stripe link styles if needed */
+  /* .footer-stripe-link {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+  } */
 }

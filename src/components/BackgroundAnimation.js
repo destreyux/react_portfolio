@@ -1,7 +1,8 @@
+// src/components/BackgroundAnimation.js
 import React, { useState, useEffect } from "react";
-import "./BackgroundAnimation.css"; // We'll create this CSS file next
+import "./BackgroundAnimation.css"; // We'll update this CSS file next
 
-// --- Import your logos (same as before) ---
+// --- Import your logos ---
 import azureDevopsLogo from "../assets/logos/azuredevops-plain.svg";
 import cLogo from "../assets/logos/c-original.svg";
 import cssLogo from "../assets/logos/css3-original.svg";
@@ -18,7 +19,7 @@ import seleniumLogo from "../assets/logos/selenium-original.svg";
 import sqlDevLogo from "../assets/logos/sqldeveloper-original.svg";
 // --- Add any other logos ---
 
-// --- Skill data (same as before) ---
+// --- Skill data ---
 const skillsData = [
   { name: "Azure DevOps", logo: azureDevopsLogo },
   { name: "C", logo: cLogo },
@@ -38,34 +39,36 @@ const skillsData = [
 ];
 
 // --- Configuration ---
-const MAX_LOGOS_VISIBLE = 12; // How many logos to animate in the background
-const MIN_ANIMATION_DURATION = 25; // Minimum seconds for a full bounce loop
-const MAX_ANIMATION_DURATION = 45; // Maximum seconds for a full bounce loop
+const MAX_LOGOS_VISIBLE = 8; // Show exactly 8 logos
+const MIN_ANIMATION_DURATION = 20; // Minimum seconds for a loop
+const MAX_ANIMATION_DURATION = 40; // Maximum seconds for a loop
+const INITIAL_DELAY_MAX = 1.0; // Max delay in seconds for initial fade-in (very short)
 
 function BackgroundAnimation() {
   const [logoPositions, setLogoPositions] = useState([]);
 
   useEffect(() => {
-    // Generate positions and animation details only once on mount
     const generateInitialState = () => {
-      // Shuffle skills for randomness
       const shuffledSkills = [...skillsData].sort(() => 0.5 - Math.random());
-      const selectedSkills = shuffledSkills.slice(0, MAX_LOGOS_VISIBLE);
+      // Ensure we only take up to MAX_LOGOS_VISIBLE, even if skillsData is shorter
+      const selectedSkills = shuffledSkills.slice(
+        0,
+        Math.min(MAX_LOGOS_VISIBLE, skillsData.length)
+      );
 
       const positions = selectedSkills.map((skill, index) => {
-        // Start position somewhere within the viewport (not exactly on edge)
-        const initialTop = Math.random() * 80 + 10; // 10% to 90%
-        const initialLeft = Math.random() * 80 + 10; // 10% to 90%
+        const initialTop = Math.random() * 85 + 7.5; // 7.5% to 92.5%
+        const initialLeft = Math.random() * 90 + 5; // 5% to 95%
 
-        // Random duration and delay for chaotic movement
         const duration =
           Math.random() * (MAX_ANIMATION_DURATION - MIN_ANIMATION_DURATION) +
           MIN_ANIMATION_DURATION;
-        const delay = Math.random() * MAX_ANIMATION_DURATION; // Delay up to max duration for staggered starts
+        // --- CHANGE: Very short initial random delay ---
+        const delay = Math.random() * INITIAL_DELAY_MAX;
 
         return {
           ...skill,
-          id: `${skill.name}-${index}-${Date.now()}`, // Unique key
+          id: `${skill.name}-${index}-${Date.now()}`,
           style: {
             top: `${initialTop}%`,
             left: `${initialLeft}%`,
@@ -78,22 +81,17 @@ function BackgroundAnimation() {
     };
 
     generateInitialState();
-
-    // No interval needed here, animation is infinite via CSS
-  }, []); // Empty dependency array means this runs once on mount
+  }, []);
 
   return (
     <div className="background-animation-container" aria-hidden="true">
-      {" "}
-      {/* Hide from screen readers */}
       {logoPositions.map((skill) => (
         <img
           key={skill.id}
           src={skill.logo}
-          alt="" // Alt text is empty as it's decorative
-          className="background-skill-logo"
-          style={skill.style}
-          // title={skill.name} // Optional: Tooltip might be distracting in background
+          alt=""
+          className="background-skill-logo" // CSS handles animation and hover
+          style={skill.style} // Provides initial position and CSS variables
         />
       ))}
     </div>
