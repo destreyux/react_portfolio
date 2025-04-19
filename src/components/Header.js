@@ -64,26 +64,29 @@ function Header({ logoSrc }) {
       {/* --- Mobile Navigation Menu (hidden by default, toggled by state) --- */}
       <nav className={`mobile-nav-menu ${isMobileMenuOpen ? "open" : ""}`}>
         {/* Update Link Text Here Too */}
-        <a href="#hero" onClick={handleLinkClick}>
+        <a href="#hero" onClick={handleLinkClick} aria-label="Home">
           Home
         </a>{" "}
         {/* Added Home link */}
-        <a href="#projects" onClick={handleLinkClick}>
+        <a href="#projects" onClick={handleLinkClick} aria-label="Projects">
           Projects
         </a>
-        <a href="#education" onClick={handleLinkClick}>
+        <a href="#education" onClick={handleLinkClick} aria-label="Education">
           Education
         </a>
-        <a href="#certifications" onClick={handleLinkClick}>
+        <a
+          href="#certifications"
+          onClick={handleLinkClick}
+          aria-label="Certifications"
+        >
           Certifications
         </a>
-        <a href="#skills" onClick={handleLinkClick}>
+        <a href="#skills" onClick={handleLinkClick} aria-label="Skills">
           Skills
         </a>
-        <a href="#feedback" onClick={handleLinkClick}>
+        <a href="#feedback" onClick={handleLinkClick} aria-label="Feedback">
           Feedback
         </a>
-        {/* <a href="#contact" onClick={handleLinkClick}>Contact</a> */}
       </nav>
     </header>
   );
