@@ -38,7 +38,7 @@ describe("Hero Component", () => {
     render(<Hero />);
 
     // Find the element using the data-testid attribute
-    const sectionElement = screen.getByRole("region", { name: /hero/i });
+    const sectionElement = (screen.getByTestId = "hero-section");
 
     // Now perform assertions directly on the element found via screen query
     expect(sectionElement).toBeInTheDocument();

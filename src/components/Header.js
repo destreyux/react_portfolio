@@ -18,7 +18,12 @@ function Header({ logoSrc /*, theme, toggleTheme */ }) {
   return (
     <header className="app-header">
       <div className="header-content">
-        <a href="#hero" className="header-logo-link" onClick={handleLinkClick}>
+        <a
+          href="#hero"
+          className="header-logo-link"
+          onClick={handleLinkClick}
+          data-testid="hero"
+        >
           <img
             src={logoSrc}
             alt="Your Logo - Scroll to top"

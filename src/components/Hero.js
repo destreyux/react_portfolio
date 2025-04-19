@@ -4,7 +4,11 @@ import "./Hero.css";
 function Hero() {
   return (
     // Add id for potential navigation linking
-    <section id="hero" className="section hero-section">
+    <section
+      id="hero"
+      className="section hero-section"
+      data-testid="hero-section"
+    >
       <h1>My Portfolio</h1>
       <h2>Software Quality Assurance Engineer</h2>
       <p>
