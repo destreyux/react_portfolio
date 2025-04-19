@@ -6,7 +6,7 @@ import "./TestRunnerSimulation.css"; // We'll create this CSS
 // Mirror the 'describe' or key test descriptions from your actual tests
 const testDescriptions = [
   "Footer Component Renders Correctly",
-  "Header Component Toggles Mobile Menu",
+  "Header Component Toggles Menu",
   "Hero Component Displays Name",
   "Project Card Renders Data",
   "Education Section Loads Data",
