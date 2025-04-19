@@ -1,0 +1,68 @@
+# File: React/.github/workflows/ci.yml
+
+# Name of the workflow (shows up in GitHub Actions tab)
+name: Run Tests and Upload Coverage
+
+# Events that trigger this workflow
+on:
+  # Run on pushes to the 'main' branch (or 'master' if that's your default)
+  push:
+    branches: [main] # Adjust 'main' if your default branch has a different name
+
+  # Run on pull requests targeting the 'main' branch
+  pull_request:
+    branches: [main] # Adjust 'main' if needed
+
+# Defines the jobs that will run as part of the workflow
+jobs:
+  # Single job named 'test_and_coverage'
+  test_and_coverage:
+    name: Test & Calculate Coverage # Display name for the job
+    runs-on: ubuntu-latest # Specify the runner environment (Linux is common and usually fastest)
+
+    # Steps represent a sequence of tasks that will be executed
+    steps:
+      # Step 1: Check out repository code under $GITHUB_WORKSPACE
+      - name: Checkout code
+        uses: actions/checkout@v4 # Use the official checkout action (v4 is current as of writing)
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v4 # Use the official Node setup action
+        with:
+          node-version: "22.14.0"
+          # Enable caching of npm dependencies for faster subsequent runs
+          cache: "npm"
+
+      # Step 3: Install project dependencies
+      - name: Install dependencies
+        # 'npm ci' is recommended for CI environments. It installs exact versions
+        # from package-lock.json and is generally faster/more reliable than 'npm install'.
+        run: npm ci
+
+      # Step 4: Run tests and generate coverage report
+      - name: Run tests and collect coverage
+        # Run the test script defined in package.json
+        # Explicitly add '-- --coverage' to ensure coverage is generated
+        # The extra '--' separates npm flags from flags passed to the script
+        run: npm test -- --coverage
+
+      # Step 5: Upload coverage report to Codecov
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4 # Use the official Codecov action (v4 is current)
+        with:
+          # --- IMPORTANT: Add your Codecov token as a SECRET in GitHub ---
+          # Name the secret 'CODECOV_TOKEN' in your repo settings
+          # (Settings > Secrets and variables > Actions > New repository secret)
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+          # Optional: Specify coverage file path(s) if not automatically detected
+          # Usually not needed for standard Jest lcov reports in ./coverage/lcov.info
+          # files: ./coverage/lcov.info
+
+          # Automatically determines the repo slug (e.g., YourUsername/React)
+          slug: ${{ github.repository }}
+
+        # Optional: Add 'continue-on-error: true' if you want the workflow to succeed
+        # even if Codecov upload fails (useful during setup or if Codecov is down)
+        # continue-on-error: true
