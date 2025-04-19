@@ -25,7 +25,7 @@ describe("Header Component - Hamburger Menu", () => {
     ({ name, href }) => {
       setupAndOpenMenu();
 
-      const linkElement = screen.getByRole("link", { name: name });
+      const linkElement = screen.getByRole("link", { name });
 
       expect(linkElement).toBeInTheDocument();
       expect(linkElement).toHaveAttribute("href", href);
