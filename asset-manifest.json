@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_portfolio/static/css/main.a8f857f0.css",
-    "main.js": "/react_portfolio/static/js/main.919c04a5.js",
+    "main.css": "/react_portfolio/static/css/main.6c2dac27.css",
+    "main.js": "/react_portfolio/static/js/main.a43d8e68.js",
     "static/js/453.bb828c5d.chunk.js": "/react_portfolio/static/js/453.bb828c5d.chunk.js",
     "static/media/project3.gif": "/react_portfolio/static/media/project3.82f31a03e9f68095a08c.gif",
     "static/media/udemy.png": "/react_portfolio/static/media/udemy.fa7ab8ca41160c4f183b.png",
@@ -29,12 +29,12 @@
     "static/media/c-original.svg": "/react_portfolio/static/media/c-original.13f24c473f4fd7f944b1410cc8058a89.svg",
     "static/media/html5-original.svg": "/react_portfolio/static/media/html5-original.8664168d5bc90b1a24396f85aadbf623.svg",
     "static/media/azuredevops-plain.svg": "/react_portfolio/static/media/azuredevops-plain.ab650dce16e66b3ab76e9cefc7f5e33e.svg",
-    "main.a8f857f0.css.map": "/react_portfolio/static/css/main.a8f857f0.css.map",
-    "main.919c04a5.js.map": "/react_portfolio/static/js/main.919c04a5.js.map",
+    "main.6c2dac27.css.map": "/react_portfolio/static/css/main.6c2dac27.css.map",
+    "main.a43d8e68.js.map": "/react_portfolio/static/js/main.a43d8e68.js.map",
     "453.bb828c5d.chunk.js.map": "/react_portfolio/static/js/453.bb828c5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8f857f0.css",
-    "static/js/main.919c04a5.js"
+    "static/css/main.6c2dac27.css",
+    "static/js/main.a43d8e68.js"
   ]
 }
