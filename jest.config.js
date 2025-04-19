@@ -24,8 +24,6 @@ module.exports = {
 
     // Exclude CRA's web vitals reporter if present
     "!src/reportWebVitals.{js,ts}",
-
-    "!src/**/*.d.ts",
   ],
   // --- End Coverage Configuration ---
 };
