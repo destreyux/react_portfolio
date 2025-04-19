@@ -25,8 +25,9 @@ describe("Header Component - Hamburger Menu", () => {
     ({ name, href }) => {
       setupAndOpenMenu();
 
+      const mobileMenu = screen.getByRole("navigation", { hidden: true });
+      expect(mobileMenu).toHaveClass("open");
       const linkElement = screen.getByLabelText(name);
-
       expect(linkElement).toBeInTheDocument();
       expect(linkElement).toHaveAttribute("href", href);
     }
