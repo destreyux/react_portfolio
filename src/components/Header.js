@@ -1,17 +1,16 @@
 // src/components/Header.js
 import React, { useState } from "react";
 import "./Header.css";
+// import DarkModeToggle from './DarkModeToggle'; // Keep if you have it
 
-function Header({ logoSrc }) {
-  // State to track if the mobile menu is open
+// Keep props as they are (logoSrc, theme, toggleTheme if needed)
+function Header({ logoSrc /*, theme, toggleTheme */ }) {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Function to toggle the mobile menu state
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Function to close menu when a link is clicked
   const handleLinkClick = () => {
     setMobileMenuOpen(false);
   };
@@ -19,7 +18,6 @@ function Header({ logoSrc }) {
   return (
     <header className="app-header">
       <div className="header-content">
-        {/* Logo Link - points to #hero (Home) */}
         <a href="#hero" className="header-logo-link" onClick={handleLinkClick}>
           <img
             src={logoSrc}
@@ -27,28 +25,33 @@ function Header({ logoSrc }) {
             className="header-logo"
           />
         </a>
-        <nav className="header-nav desktop-nav">
-          <a href="#hero" aria-label="Home">
-            Home
-          </a>{" "}
-          <a href="#projects" aria-label="Projects">
-            Projects
-          </a>
-          <a href="#education" aria-label="Education">
-            Education
-          </a>
-          <a href="#certifications" aria-label="Certifications">
-            Certifications
-          </a>
-          <a href="#skills" aria-label="Skills">
-            Skills
-          </a>
-          <a href="#feedback" aria-label="Feedback">
-            Feedback
-          </a>
-        </nav>
 
-        {/* --- Hamburger Menu Button (hidden by default, shown on mobile) --- */}
+        <div className="header-right-content">
+          {/* --- Add aria-label to Desktop Nav --- */}
+          <nav className="header-nav desktop-nav" aria-label="Main navigation">
+            {/* ... your desktop links ... */}
+            <a href="#hero" aria-label="Home">
+              Home
+            </a>
+            <a href="#projects" aria-label="Projects">
+              Projects
+            </a>
+            <a href="#education" aria-label="Education">
+              Education
+            </a>
+            <a href="#certifications" aria-label="Certifications">
+              Certifications
+            </a>
+            <a href="#skills" aria-label="Skills">
+              Skills
+            </a>
+            <a href="#feedback" aria-label="Feedback">
+              Feedback
+            </a>
+          </nav>
+          {/* <DarkModeToggle theme={theme} toggleTheme={toggleTheme} /> */}
+        </div>
+
         <button
           className={`hamburger-menu ${isMobileMenuOpen ? "open" : ""}`}
           onClick={toggleMobileMenu}
@@ -61,13 +64,16 @@ function Header({ logoSrc }) {
         </button>
       </div>
 
-      {/* --- Mobile Navigation Menu (hidden by default, toggled by state) --- */}
-      <nav className={`mobile-nav-menu ${isMobileMenuOpen ? "open" : ""}`}>
-        {/* Update Link Text Here Too */}
+      {/* --- Add aria-label to Mobile Nav --- */}
+      <nav
+        className={`mobile-nav-menu ${isMobileMenuOpen ? "open" : ""}`}
+        aria-label="Mobile navigation"
+        aria-hidden={!isMobileMenuOpen} // Add aria-hidden for accessibility
+      >
+        {/* ... your mobile links ... */}
         <a href="#hero" onClick={handleLinkClick} aria-label="Home">
           Home
-        </a>{" "}
-        {/* Added Home link */}
+        </a>
         <a href="#projects" onClick={handleLinkClick} aria-label="Projects">
           Projects
         </a>
