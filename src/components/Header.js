@@ -27,16 +27,25 @@ function Header({ logoSrc }) {
             className="header-logo"
           />
         </a>
-
-        {/* --- Desktop Navigation (visible by default) --- */}
         <nav className="header-nav desktop-nav">
-          {/* Update Link Text Here */}
-          <a href="#hero">Home</a> {/* Added Home link */}
-          <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#skills">Skills</a>
-          <a href="#feedback">Feedback</a>
+          <a href="#hero" aria-label="Home">
+            Home
+          </a>{" "}
+          <a href="#projects" aria-label="Projects">
+            Projects
+          </a>
+          <a href="#education" aria-label="Education">
+            Education
+          </a>
+          <a href="#certifications" aria-label="Certifications">
+            Certifications
+          </a>
+          <a href="#skills" aria-label="Skills">
+            Skills
+          </a>
+          <a href="#feedback" aria-label="Feedback">
+            Feedback
+          </a>
         </nav>
 
         {/* --- Hamburger Menu Button (hidden by default, shown on mobile) --- */}
