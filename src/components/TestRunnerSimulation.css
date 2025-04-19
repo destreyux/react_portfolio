@@ -1,0 +1,111 @@
+/* src/components/TestRunnerSimulation.css */
+
+.test-simulation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Take full viewport height */
+  width: 100%;
+  background-color: #1e1e1e; /* Dark background like a terminal */
+  color: #d4d4d4; /* Light text */
+  font-family: "Consolas", "Monaco", monospace; /* Monospace font */
+  padding: 2rem;
+  box-sizing: border-box;
+  position: fixed; /* Keep it covering everything initially */
+  top: 0;
+  left: 0;
+  z-index: 100; /* High z-index to be on top */
+}
+
+.test-simulation-output {
+  max-width: 800px;
+  width: 100%;
+  background-color: #252526;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 5px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.test-simulation-output h2 {
+  color: #4ec9b0; /* Teal color */
+  margin-bottom: 1.5rem;
+  font-size: 1.2em;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.test-line {
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+  white-space: pre-wrap; /* Allow wrapping but keep spaces */
+  line-height: 1.4;
+}
+
+.test-status {
+  display: inline-block;
+  width: 90px; /* Fixed width for alignment */
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.test-line.status-pending .test-status {
+  color: #cccccc; /* Grey */
+}
+
+.test-line.status-running .test-status {
+  color: #dcdcaa; /* Yellowish */
+}
+/* Optional: Add blinking effect for running */
+.test-line.status-running .test-status::after {
+  content: "_";
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.test-line.status-pass .test-status {
+  color: #4fc34d; /* Green */
+}
+
+.test-line.status-fail .test-status {
+  color: #f44747; /* Red */
+}
+
+.test-name {
+  color: #d4d4d4;
+}
+
+.test-complete-message {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  color: #4fc34d;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Optional Skip Button Styling */
+.skip-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  border: 1px solid #555;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.skip-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
