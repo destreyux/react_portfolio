@@ -21,39 +21,37 @@ body {
     sans-serif;
   line-height: 1.6;
   color: #333;
-  /* --- Make body background transparent OR set a base color that animation sits ON TOP of --- */
-  background-color: transparent; /* Let animation show through from .App */
-  /* Or: background-color: #f4f7f9; if animation has its own subtle bg */
-  position: relative; /* Needed if .App doesn't have it, provides context */
+  /* --- Set a base background color --- */
+  /* The fixed background animation will sit visually on top of this */
+  background-color: #f4f7f9;
+  /* position: relative; */ /* <<< REMOVE/COMMENT OUT - Not needed for fixed background */
   min-height: 100vh;
 }
 
-/* --- Add position: relative for Absolute Background --- */
 .App {
-  position: relative; /* Crucial: Establishes positioning context for the absolute background */
-  min-height: 100vh; /* Ensure it can contain content */
-  /* overflow: hidden; */ /* Optional: May help if absolute element causes slight overflow */
+  /* position: relative; */ /* <<< REMOVE/COMMENT OUT - Not needed for fixed background */
+  min-height: 100vh;
 }
 
 /* Main Content Area Wrapper */
 .main-content {
-  position: relative; /* Needed for z-index */
-  z-index: 1; /* Position above background animation */
+  position: relative; /* Keep for z-index */
+  z-index: 1;         /* Position content above background animation */
   background-color: transparent; /* Let background animation show through */
   max-width: 1200px; /* Constrain width */
-  margin: 0 auto; /* Center the constrained content */
+  margin: 0 auto;    /* Center the constrained content */
   padding-top: 70px; /* Space below fixed DESKTOP header */
 
-  /* --- REMOVE PADDING BOTTOM FOR FIXED FOOTER --- */
-  /* This is no longer needed as footer doesn't overlap flow with absolute bg */
-  /* padding-bottom: 75px; */
+  /* --- RE-ADD PADDING BOTTOM FOR FIXED FOOTER --- */
+  /* Value MUST be >= the height set for .app-footer in Footer.css */
+  padding-bottom: 75px; /* Example: 55px desktop footer height + 20px buffer */
 }
 
 /* Basic Section Styling */
 .section {
   padding: 4rem 2rem;
   margin-bottom: 2rem;
-  background-color: transparent; /* IMPORTANT: Keep background visible */
+  background-color: transparent; /* IMPORTANT: Keep sections transparent */
   min-height: 40vh;
 }
 
@@ -71,13 +69,12 @@ body {
     scroll-padding-top: 60px; /* Match mobile header height */
   }
 
-  /* Adjust body padding if needed */
-  /* body { ... } */
-
   .main-content {
     padding-top: 60px; /* Space below fixed MOBILE header */
-    /* --- REMOVE PADDING BOTTOM FOR FIXED FOOTER --- */
-    /* padding-bottom: 70px; */
+
+    /* --- RE-ADD PADDING BOTTOM FOR MOBILE FIXED FOOTER --- */
+    /* Should be >= height of .app-footer in its media query */
+    padding-bottom: 70px; /* Example: 50px mobile footer height + 20px buffer */
   }
 
   .section {

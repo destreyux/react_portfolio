@@ -33,7 +33,7 @@ export const skillsData = [
 ];
 
 // Configuration constants
-export const MAX_LOGOS_VISIBLE = 8;
+export const MAX_LOGOS_VISIBLE = 14;
 export const MIN_ANIMATION_DURATION = 20; // Minimum seconds for a loop
 export const MAX_ANIMATION_DURATION = 40; // Maximum seconds for a loop
 export const INITIAL_DELAY_MAX = 1.0; // Max delay in seconds for initial fade-in
