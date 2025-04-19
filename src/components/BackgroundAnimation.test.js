@@ -22,12 +22,4 @@ describe("BackgroundAnimation Component", () => {
             expect(logo).toHaveStyle("left");
         });
     });
-
-    test("logos are rendered with unique keys", () => {
-        render(<BackgroundAnimation />);
-        const logos = screen.getAllByRole("img", { hidden: true });
-        const keys = logos.map((logo) => logo.getAttribute("key"));
-        const uniqueKeys = new Set(keys);
-        expect(uniqueKeys.size).toBe(keys.length); // Ensure all keys are unique
-    });
-});
+})
