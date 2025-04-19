@@ -21,7 +21,6 @@ import "./App.css"; // Main app styles
 function App() {
   const [appState, setAppState] = useState("simulating"); // Start in simulation mode
 
-  // Callback function to be called by TestRunnerSimulation when it finishes
   const handleSimulationComplete = () => {
     console.log("Test simulation complete. Displaying main portfolio content.");
     setAppState("portfolio"); // Change state to show the portfolio
