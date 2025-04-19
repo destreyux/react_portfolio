@@ -53,7 +53,7 @@ function Header({ logoSrc }) {
           className={`hamburger-menu ${isMobileMenuOpen ? "open" : ""}`}
           onClick={toggleMobileMenu}
           aria-label="Toggle navigation menu"
-          aria-expanded={isMobileMenuOpen}
+          aria-expanded={isMobileMenuOpen ? "true" : "false"}
         >
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
