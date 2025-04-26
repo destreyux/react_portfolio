@@ -2,6 +2,7 @@
 import project1Gif from "../assets/projects/project1.gif";
 import project2Img from "../assets/projects/project2.png"; // Example static image
 import project3Gif from "../assets/projects/project3.gif";
+import project4Gif from "../assets/projects/project4.gif"; // Example static image
 
 export const projects = [
   {
@@ -54,5 +55,20 @@ export const projects = [
       "Azure DevOps",
     ],
   },
+  {
+    title: "Agent OnBoarding Automation [Enterprise]",
+    description: "Automates the onboarding process for newly contracted agent. This program works with OnBase workflows as well as the EXL LifePro System. The program is ran through an Azure Agent on a set schedule to grab documents containing agent onboarding information and then inputting the data into EXL LifePro System to automatically create the agent removing the entire duty for the department. Ensuring accuracy, high agent ratings, and allowing agents to start selling faster.",
+    imageUrl: project4Gif, // Replace with actual path
+    liveUrl: null,
+    repoUrl: null,
+    tags: ["C#", 
+      "dotnet", 
+      "UI Automation",
+      "Azure DevOps",
+      "Azure Agent",
+      "Azure Pipelines",
+      "EXL LifePro System",
+      "OnBase",],
+  }
   // Add more project objects here
 ];
