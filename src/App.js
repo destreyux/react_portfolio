@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState } from "react"; // Import useState hook
+import React, { useState } from "react";
 
 // Import Components
 import BackgroundAnimation from "./components/BackgroundAnimation";
@@ -11,35 +11,33 @@ import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Feedback from "./components/Feedback";
 import Footer from "./components/Footer";
-import TestRunnerSimulation from "./components/TestRunnerSimulation"; // Import the simulation component
-
+import TestRunnerSimulation from "./components/TestRunnerSimulation";
 // Import Assets
 import myLogo from "./assets/my-logo.png";
 
 import "./App.css"; // Main app styles
+import DataFetchingviaApi from "./components/DataFetchingviaApi";
 
 function App() {
   const [appState, setAppState] = useState("simulating"); // Start in simulation mode
 
   const handleSimulationComplete = () => {
     console.log("Test simulation complete. Displaying main portfolio content.");
-    setAppState("portfolio"); // Change state to show the portfolio
+    setTimeout(() => setAppState("portfolio"), 500); // Automatically transition to portfolio after 3 seconds
   };
 
   return (
-    // Optionally apply dark mode class here if needed: className={`App ${theme === 'dark' ? 'dark-mode' : ''}`}
     <div className="App">
       {appState === "simulating" ? (
         <TestRunnerSimulation onComplete={handleSimulationComplete} />
       ) : (
         <>
-          {" "}
           <BackgroundAnimation />
-          {/* Header */}
           <Header logoSrc={myLogo} />
           <main className="main-content">
-            <Hero />
+            <Hero/>
             <Projects />
+            <DataFetchingviaApi/>
             <Education />
             <Certifications />
             <Skills />
