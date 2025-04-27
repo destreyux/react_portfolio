@@ -41,6 +41,9 @@ function Header({ logoSrc /*, theme, toggleTheme */ }) {
             <a href="#projects" aria-label="Projects">
               Projects
             </a>
+            <a href="#data-fetching" aria-label="Data Fetching">
+              Data Fetching
+            </a>
             <a href="#education" aria-label="Education">
               Education
             </a>
@@ -81,6 +84,9 @@ function Header({ logoSrc /*, theme, toggleTheme */ }) {
         </a>
         <a href="#projects" onClick={handleLinkClick} aria-label="Projects">
           Projects
+        </a>
+        <a href="#data-fetching" onClick={handleLinkClick} aria-label="Data Fetching">
+          Data Fetching
         </a>
         <a href="#education" onClick={handleLinkClick} aria-label="Education">
           Education

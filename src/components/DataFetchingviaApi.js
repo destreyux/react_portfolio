@@ -5,7 +5,7 @@ import RandomAnimalImagesApiPull from "../data/RandomAnimalImagesApiPull";
 
 function DataFetchingviaApi() {
   return (
-    <div className="container">
+    <div id="data-fetching" className="container">
       <h1>Data Fetching via API</h1>
       <div className="api-containers-wrapper">
         <div className="api-container">
