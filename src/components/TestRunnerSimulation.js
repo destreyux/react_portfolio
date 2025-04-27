@@ -9,6 +9,7 @@ const testDescriptions = [
   "Header Component Toggles Menu",
   "Hero Component Displays Name",
   "Project Card Renders Data",
+  "Data Fetching via API Loads Data from Crypto API and Random Animal Images API",
   "Education Section Loads Data",
   "Certification Section Loads Data",
   "Skills Section Structure",

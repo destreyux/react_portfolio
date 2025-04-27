@@ -8,6 +8,6 @@ describe("TestRunnerSimulation Component", () => {
     test("renders all test descriptions in the initial pending state", () => {
         render(<TestRunnerSimulation onComplete={jest.fn()} />);
         const pendingTests = screen.getAllByText("[PENDING]");
-        expect(pendingTests).toHaveLength(8); // Ensure all 8 tests are initially pending
+        expect(pendingTests).toHaveLength(9); // Ensure all 8 tests are initially pending
     });
 });
