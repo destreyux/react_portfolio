@@ -3,8 +3,16 @@ import MICROSOFT from "../assets/certification/microsoft.png";
 import SIGMA from "../assets/certification/sigma.png";
 import UDEMY from "../assets/certification/udemy.png";
 import SMARTBEAR from "../assets/certification/smartbear.png";
+import ASTQB from "../assets/certification/ASTQB-Logo.svg";
 
 export const certificationsData = [
+  {
+    name: "ISTBQ Foundational Level",
+    issuer: "American Software Testing Qualifications Board",
+    date: "In-Progress",
+    link: null,
+    logoUrl: ASTQB
+  },
   {
     name: "Selenium Webdriver with PYTHON from Scratch + Frameworks",
     issuer: "Udemy",
@@ -21,7 +29,7 @@ export const certificationsData = [
   },
   {
     name: "Lean Six Sigma White Belt",
-    issuer: "Issuing Body",
+    issuer: "Six Sigma Online; Aveta Business Institute",
     date: "04/2025",
     link: null,
     logoUrl: SIGMA,

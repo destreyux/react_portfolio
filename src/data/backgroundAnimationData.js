@@ -13,6 +13,9 @@ import pythonLogo from "../assets/logos/python-original.svg";
 import reactLogo from "../assets/logos/react-original.svg";
 import seleniumLogo from "../assets/logos/selenium-original.svg";
 import sqlDevLogo from "../assets/logos/sqldeveloper-original.svg";
+import typescriptLogo from "../assets/logos/typescript-original.svg";
+import dockerLogo from "../assets/logos/docker.svg";
+import postmanLogo from "../assets/logos/postman.svg";
 
 // Skill data
 export const skillsData = [
@@ -30,6 +33,9 @@ export const skillsData = [
   { name: "React", logo: reactLogo },
   { name: "Selenium", logo: seleniumLogo },
   { name: "SQL Developer", logo: sqlDevLogo },
+  { name: "TypeScript", logo: typescriptLogo },
+  { name: "Docker", logo: dockerLogo },
+  { name: "Postman", logo: postmanLogo }
 ];
 
 // Configuration constants
