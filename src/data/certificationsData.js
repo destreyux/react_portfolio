@@ -7,6 +7,13 @@ import ASTQB from "../assets/certification/ASTQB-Logo.svg";
 
 export const certificationsData = [
   {
+    name: "The Ultimate React Course 2025: React, Next.js, Redux & More",
+    issuer: "Udemy",
+    date: "08/2025",
+    link: null,
+    logoUrl: UDEMY
+  },
+  {
     name: "ISTBQ Foundational Level",
     issuer: "American Software Testing Qualifications Board",
     date: "In-Progress",

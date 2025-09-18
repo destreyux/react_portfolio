@@ -5,6 +5,11 @@ import project3Gif from "../assets/projects/project3.gif";
 import project4Gif from "../assets/projects/project4.gif";
 import project5Gif from "../assets/projects/project5.gif"; // Example static image
 import project6Gif from "../assets/projects/project6.gif";
+import project7Gif from "../assets/projects/project7.gif"; 
+import project8Img from "../assets/projects/project8.png"; 
+import project9Img from "../assets/projects/project9.png"; 
+
+
 
 export const projects = [
   {
@@ -43,7 +48,7 @@ export const projects = [
     ],
   },
   {
-    title: "Automation Regression Testing [Enterprise]",
+    title: "TestComplete Automation Regression Testing [Enterprise]",
     description:
       "Uses Data-Driven framework, collects the data and generates random data through scripts, all the data is input into the web application, quotes are validated against data within a range. Runs around five thousand test cases in an hour to an hour and a half.",
     imageUrl: project3Gif,
@@ -55,6 +60,24 @@ export const projects = [
       "Jira",
       "Zephyr Squad",
       "Azure DevOps",
+    ],
+  },
+  {
+        title: "E2E Insurance Quoting Automation Framework [Enterprise]",
+    description:
+      "Automates the end-to-end user journey for a multi-product insurance quoting application. This data-driven framework uses Playwright with a scalable Page Object Model to validate the entire business flow, from applicant entry to final premium calculation. The suite runs in a consistent Docker environment, is triggered automatically by Jenkins for CI/CD, and integrates with Jira to create bug tickets from failed pipeline runs, providing rapid and actionable feedback to developers.",
+    imageUrl: project7Gif,
+    liveUrl: null,
+    repoUrl: null,
+    tags: [
+      "Typescript",
+      "Playwright",
+      "POM",
+      "Docker",
+      "Jenkins",
+      "Jira",
+      "Azure DevOps",
+      "Git",
     ],
   },
   {
@@ -79,9 +102,9 @@ export const projects = [
     liveUrl: null,
     repoUrl: null,
     tags: ["Python", 
-      "Playwright", 
       "Webhooks",
-      "Automation"
+      "Automation",
+      "Git",
     ]
   },
   {
@@ -90,7 +113,50 @@ export const projects = [
     imageUrl: project6Gif,
     liveUrl: null,
     repoUrl: null,
-    tags: ["JavaScript", "Python", "Database", "Hardware", "Cisco Switch", "Cloudflare", "Docker", "Jenkins", "PostgreSQL", "Gemma", "MCP", "Quickbooks", "AI"]
+    tags: ["JavaScript", "Python", "Database", "Hardware", "Cisco Switch", "Cloudflare", "Docker", "Jenkins", "PostgreSQL", "Gemma", "MCP", "Quickbooks", "AI", "Git",]
+  },
+  {
+    title: "Custom Wedding Website with Interactive Guest Features",
+    description: "I engineered a bespoke website to serve as a central hub for wedding guests, handling everything from logistics to shared memories. The platform features a secure RSVP system powered by an SQLite database to validate guest entries and manage the attendee list. To keep everyone informed, I integrated an automated email notification system for any updates to the event schedule. A key feature is the live, collaborative media gallery which, using the Google Drive API, allows guests to upload their own photos and videos directly to the site. The entire application is self-hosted on a custom-built home server running on a Cisco server with an Ubuntu OS, virtualized using Proxmox for efficient resource management.",
+    imageUrl: project8Img,
+    liveUrl: null,
+    repoUrl: null,
+    tags: [
+      "Full-Stack",
+      "Web Development",
+      "Self-Hosted",
+      "Proxmox",
+      "Unbuntu",
+      "Docker",
+      "SysAdmin",
+      "Cisco",
+      "Docker",
+      "HTML",
+      "CSS",
+      "SQLite",
+      "Google Drive API",
+      "Python",
+      "Json",
+      "Git"
+    ]
+  },
+  {
+    title: "GuestCam: Disposable Wedding Camera App [In Progress]",
+    description: "This mobile app acts as a digital disposable camera for wedding guests, creating a private and seamless way to collect memories. Building upon my wedding website's backend, the app authenticates guests against the existing SQLite database using just their names. Once logged in, guests can capture photos and videos with a simple, Snapchat-like interface. All captured media is automatically uploaded in the background to a designated Google Drive folder via the API, ensuring every moment is saved centrally without using the guests' personal phone storage.",
+    imageUrl: project9Img,
+    liveUrl: null,
+    repoUrl: null,
+    tags: [
+      "Mobile App",
+      "SQLite",
+      "Google Drive API",
+      "Authentication",
+      "Camera",
+      "Video",
+      "Event Photography",
+      "UI/UX",
+      "Git"
+    ]
   }
   // Add more project objects here
 ];
