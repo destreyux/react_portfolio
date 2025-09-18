@@ -137,6 +137,9 @@ export const projects = [
       "Google Drive API",
       "Python",
       "Json",
+      "Metadata",
+      "Google Analytics",
+      "UI/UX",
       "Git"
     ]
   },
