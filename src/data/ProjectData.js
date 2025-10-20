@@ -8,6 +8,7 @@ import project6Gif from "../assets/projects/project6.gif";
 import project7Gif from "../assets/projects/project7.gif"; 
 import project8Img from "../assets/projects/project8.png"; 
 import project9Img from "../assets/projects/project9.png"; 
+import project10Gif from "../assets/projects/project10.gif"
 
 
 
@@ -160,6 +161,36 @@ export const projects = [
       "UI/UX",
       "Git"
     ]
+  },
+  {
+    title: "E-commerce Inventory Management and Marketplace Listing Pipeline [Enterprise]",
+    description: "This project is a full-stack, distributed data pipeline designed to automate the ingestion of inventory reports, enrich product data using AI, and manage marketplace listing prices and flags via a dedicated web interface. The architecture uses a lightweight Proxmox LXC container to host the core API and database, allowing for persistent, remote data management while processing scripts run locally.",
+    imageUrl: project10Gif, // Replace with actual path
+    liveUrl: null,
+    repoUrl: null,
+    tags: [
+      "Rest API",
+      "Python",
+      "Flask",
+      "SQLite",
+      "AI Integration",
+      "Gemini",
+      "Proxmox",
+      "pandas",
+      "requests",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "LXC",
+      "Service",
+      "WinSCP",
+      "HomeLab",
+      "Git",
+      "asyncio",
+      "aiohttp",
+      "cache",
+      "email parsing",
+    ],
   }
   // Add more project objects here
 ];
