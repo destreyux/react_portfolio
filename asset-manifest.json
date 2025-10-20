@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react_portfolio/static/css/main.aa0b21cb.css",
-    "main.js": "/react_portfolio/static/js/main.beb0034a.js",
+    "main.js": "/react_portfolio/static/js/main.211c36e6.js",
     "static/media/project9.png": "/react_portfolio/static/media/project9.ce6029d55b9c6299a61f.png",
     "static/media/project3.gif": "/react_portfolio/static/media/project3.82f31a03e9f68095a08c.gif",
     "static/media/project5.gif": "/react_portfolio/static/media/project5.4ff6427654b3d563f128.gif",
@@ -10,6 +10,7 @@
     "static/media/project4.gif": "/react_portfolio/static/media/project4.c595e5b5765b3f3ed21b.gif",
     "static/media/project6.gif": "/react_portfolio/static/media/project6.40772a90f305ec54dfcf.gif",
     "static/media/udemy.png": "/react_portfolio/static/media/udemy.fa7ab8ca41160c4f183b.png",
+    "static/media/project10.gif": "/react_portfolio/static/media/project10.eee0c2fe29b727d82ae6.gif",
     "static/media/project1.gif": "/react_portfolio/static/media/project1.50f82d704d4aa7e3cc94.gif",
     "static/media/microsoft.png": "/react_portfolio/static/media/microsoft.b344c194f0ef1166c356.png",
     "static/media/elmhurst.jpg": "/react_portfolio/static/media/elmhurst.0c0acbe60eb1cef49947.jpg",
@@ -39,10 +40,10 @@
     "index.html": "/react_portfolio/index.html",
     "static/media/azuredevops-plain.svg": "/react_portfolio/static/media/azuredevops-plain.abd70dbee205051b5bf78de46c84760c.svg",
     "main.aa0b21cb.css.map": "/react_portfolio/static/css/main.aa0b21cb.css.map",
-    "main.beb0034a.js.map": "/react_portfolio/static/js/main.beb0034a.js.map"
+    "main.211c36e6.js.map": "/react_portfolio/static/js/main.211c36e6.js.map"
   },
   "entrypoints": [
     "static/css/main.aa0b21cb.css",
-    "static/js/main.beb0034a.js"
+    "static/js/main.211c36e6.js"
   ]
 }
